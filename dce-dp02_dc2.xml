@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns="http://www.ivoa.net/xml/VOTable/v1.3"
+                       xmlns:stc="http://www.ivoa.net/xml/STC/v1.30"
+                       xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3
+                       http://www.ivoa.net/xml/VOTable/v1.3
+                       http://www.ivoa.net/xml/STC/v1.30
+                       http://www.ivoa.net/xml/STC/v1.30">
+
+    <RESOURCE type="meta" utype="CISX:adhoc:service" ID="sia_dp02_primary_pos">
+        <DESCRIPTION>DP0.2 Images</DESCRIPTION>
+        <PARAM name="standardID" datatype="char" arraysize="*" value="ivo://ivoa.net/std/SIA#query-2.0#sharedInputParams"/>
+        <!-- TODO: Needs URL template -->
+        <PARAM name="accessURL" datatype="char" arraysize="*" value="https://data-int.lsst.cloud/api/sia/dp02/query"/>
+
+        <GROUP name="CISX:ui">
+
+            <!-- TODO: Needs URL template -->
+            <PARAM name="HiPS" datatype="char" arraysize="*" value="https://data-int.lsst.cloud/api/hips/images/color_gri">
+                <DESCRIPTION>HiPS Maps</DESCRIPTION>
+            </PARAM>
+            <PARAM name="hips_initial_fov" datatype="double" unit="deg" ucd="phys.angSize;instr.fov" value="40.0"/>
+            <PARAM name="hips_initial_ra" datatype="double" unit="deg" ucd="pos.eq.ra" value="61.863"/>
+            <PARAM name="hips_initial_dec" datatype="double" unit="deg" ucd="pos.eq.dec" value="-35.79"/>
+
+            <!-- TODO: Needs URL template -->
+            <PARAM name="moc" datatype="char" arraysize="*" value="https://data-int.lsst.cloud/api/hips/images/color_gri/Moc.fits">
+                <DESCRIPTION>DP0.2 coverage</DESCRIPTION>
+            </PARAM>
+            <PARAM name="moc_color" datatype="char" arraysize="*" value="yellow"/>
+
+            <PARAM name="data_covers_allsky" datatype="boolean" value="false"/>
+            <PARAM name="hips_frame" datatype="char" arraysize="*" value="equatorial"/>
+            <PARAM name="examples" datatype="char" arraysize="*" value="62, -37 | 60.4 -35.1 | 4h11m59s -32d51m59s equ j2000 | 239.2 -47.6 gal"/>
+            <PARAM name="polygon_examples" datatype="char" arraysize="*" value="57.33 -33.66, 57.83 -33.66, 57.83 -34.26, 57.33 -34.26"/>
+
+            <!-- TODO-->
+            <PARAM name="hidden_columns" datatype="char" arraysize="*" value=""/>
+
+            <PARAM name="table_sort_order" datatype="char" arraysize="*" value="ASC,obs_id,substring(&quot;dataproduct_subtype&quot;,2)" />
+        </GROUP>
+
+        <GROUP name="inputParams">
+            <DESCRIPTION>Single object Search</DESCRIPTION>
+
+            <PARAM name="POS" datatype="double" arraysize="*" unit="deg" value=".1" xtype="circle" >
+                <VALUES>
+                    <MIN value="0" />
+                    <MAX value="1" />
+               </VALUES>
+            </PARAM>
+            <PARAM name="POS" datatype="char" arraysize="*" value="" xtype="polygon" />
+            <PARAM name="POS" datatype="char" arraysize="*" value="" xtype="range" />
+            <PARAM name="COLLECTION" datatype="char" arraysize="*" value="LSST.DP02" />
+            <PARAM name="RESPONSEFORMAT" datatype="char" arraysize="*" value="VOTABLE" />
+        </GROUP>
+
+    </RESOURCE>
+
+    <RESOURCE type="results">
+    <INFO name="QUERY_STATUS" value="OK"/>
+    <TABLE>
+      <FIELD name="id" datatype="char" arraysize="*" ID="col_0"/>
+      <FIELD name="access_url" datatype="char" arraysize="*" ID="col_1"/>
+      <FIELD name="service_def" datatype="char" arraysize="*" ID="col_2"/>
+      <FIELD name="error_message" datatype="char" arraysize="*" ID="col_3"/>
+      <FIELD name="semantics" datatype="char" arraysize="*" ID="col_4"/>
+      <FIELD name="description" datatype="char" arraysize="*" ID="col_5"/>
+      <FIELD name="content_type" datatype="char" arraysize="*" ID="col_6"/>
+      <FIELD name="content_length" datatype="long" ID="col_7"/>
+      <DATA>
+        <TABLEDATA>
+          <TR>
+            <TD>dp02_dc2</TD>
+            <TD></TD>
+            <TD>sia_dp02_primary_pos</TD>
+            <TD></TD>
+            <TD>https://irsa.ipac.caltech.edu/rdf/CISX#primary-query</TD>
+            <TD>DP0.2 Image Search via SIAv2</TD>
+            <TD>application/x-votable+xml</TD>
+            <TD>0</TD>
+          </TR>
+          <TR>
+            <TD>dp02_dc2</TD>
+            <TD>https://dp0-2.lsst.io</TD>
+            <TD></TD>
+            <TD></TD>
+            <TD>#documentation</TD>
+            <TD>Data Preview 0.2 Documentation</TD>
+            <TD>text/html</TD>
+            <TD>0</TD>
+          </TR>
+        </TABLEDATA>
+      </DATA>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>
