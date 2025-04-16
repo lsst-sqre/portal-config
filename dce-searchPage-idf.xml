@@ -25,7 +25,7 @@
             <TD>LSSTCam-imSim</TD>
             <TD>simulated</TD>
             <TD>Optical</TD>
-            <TD>https://raw.githubusercontent.com/lsst-sqre/portal-config/refs/heads/tickets/DM-43947/dce-dp02_dc2.xml</TD>
+            <TD>https://raw.githubusercontent.com/lsst-sqre/portal-config/refs/heads/main/dce-dp02_dc2.xml</TD>
             <TD>application/x-votable+xml</TD>
             <TD>Images</TD>
           </TR>
