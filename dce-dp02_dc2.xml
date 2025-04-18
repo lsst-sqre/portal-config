@@ -16,6 +16,7 @@
         <GROUP name="CISX:ui">
 
             <!-- TODO: Needs URL template -->
+            <PARAM name="data_service_id" datatype="char" arraysize="*" value="rubin"/>
             <PARAM name="HiPS" datatype="char" arraysize="*" value="https://data-int.lsst.cloud/api/hips/images/color_gri">
                 <DESCRIPTION>HiPS Maps</DESCRIPTION>
             </PARAM>
@@ -43,14 +44,15 @@
         <GROUP name="inputParams">
             <DESCRIPTION>Single object Search</DESCRIPTION>
 
-            <PARAM name="POS" datatype="double" arraysize="*" unit="deg" value=".1" xtype="circle" >
+            <PARAM name="POS" datatype="double" arraysize="*" unit="deg" value=".000278" xtype="circle" >
                 <VALUES>
                     <MIN value="0" />
-                    <MAX value="1" />
+                    <MAX value=".027778" />
                </VALUES>
             </PARAM>
             <PARAM name="POS" datatype="char" arraysize="*" value="" xtype="polygon" />
-            <PARAM name="POS" datatype="char" arraysize="*" value="" xtype="range" />
+            <PARAM name="BAND" datatype="double" arraysize="*" value="" ucd="em.wl"/>
+            <PARAM name="CALIB" datatype="double" arraysize="*" value=""  ucd="meta.code;obs.calib"/>
             <PARAM name="COLLECTION" datatype="char" arraysize="*" value="LSST.DP02" />
             <PARAM name="RESPONSEFORMAT" datatype="char" arraysize="*" value="VOTABLE" />
         </GROUP>
