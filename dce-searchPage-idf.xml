@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xmlns:stc="http://www.ivoa.net/xml/STC/v1.30" xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/STC/v1.30 http://www.ivoa.net/xml/STC/v1.30">
+  <RESOURCE type="results">
+    <INFO name="QUERY_STATUS" value="OK"/>
+    <TABLE>
+      <FIELD name="facility_name" datatype="char" arraysize="*" ID="col_0"/>
+      <FIELD name="description" datatype="char" arraysize="*" ID="col_1"/>
+      <FIELD name="collection_label" datatype="char" arraysize="*" ID="col_2"/>
+      <FIELD name="obs_collection" datatype="char" arraysize="*" ID="col_3"/>
+      <FIELD name="info_url" datatype="char" arraysize="*" ID="col_4"/>
+      <FIELD name="instrument_name" datatype="char" arraysize="*" ID="col_5"/>
+      <FIELD name="coverage" datatype="char" arraysize="*" ID="col_6"/>
+      <FIELD name="band" datatype="char" arraysize="*" ID="col_7"/>
+      <FIELD name="access_url" datatype="char" arraysize="*" ID="col_8"/>
+      <FIELD name="access_format" datatype="char" arraysize="*" ID="col_9"/>
+      <FIELD name="dataproduct_type" datatype="char" arraysize="*" ID="col_10"/>
+      <DATA>
+        <TABLEDATA>
+          <TR>
+            <TD>Rubin-LSST</TD>
+            <TD>Data Preview 0.2 Images</TD>
+            <TD>LSST.DP02</TD>
+            <TD>dp02_dc2</TD>
+            <TD>https://dp0-2.lsst.io</TD>
+            <TD>LSSTCam-imSim</TD>
+            <TD>simulated</TD>
+            <TD>Optical</TD>
+            <TD>https://raw.githubusercontent.com/lsst-sqre/portal-config/refs/heads/main/dce-dp02_dc2.xml</TD>
+            <TD>application/x-votable+xml</TD>
+            <TD>Images</TD>
+          </TR>
+        </TABLEDATA>
+      </DATA>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>
